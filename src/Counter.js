@@ -18,7 +18,13 @@ function Counter() {
   };
 
   const onDncreaseThreeTiems = () => {
-    setNumber(number => number - 3)
+    setNumber(number => number - 3);
+    // 순차적으로 3번 실행 시켜도 인자로 콜백함수를 넘겨줘야
+    // 계획한 대로 실행된다.
+    // 아래는 실행해도 실제로 상태값인 number는 (-1)만 적용됨
+    // setNumber(number - 1);
+    // setNumber(number - 1);
+    // setNumber(number - 1);
   };
 
   return (
