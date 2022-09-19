@@ -4,13 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Counter from './Counter';
+import ErrorBoundary from './ErrorBoundary';
+import User from './User';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-    {/* <Counter /> */}
-  </React.StrictMode>
+  // <React.StrictMode>
+  //   <App />
+  //   <Counter />
+  // </React.StrictMode>
+  <ErrorBoundary>
+    <User />
+  </ErrorBoundary>
 );
 
 // If you want to start measuring performance in your app, pass a function
